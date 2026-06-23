@@ -285,6 +285,88 @@
         });
       });
     }
+    // --- SCRIPT 5: Lọc nội dung thư viện ảnh (Filter Gallery) ---
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    if (filterButtons.length > 0 && galleryItems.length > 0) {
+      filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          // 1. Cập nhật trạng thái hiển thị active cho các nút bấm
+          filterButtons.forEach(btn => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          // 2. Lấy giá trị bộ lọc của nút vừa bấm
+          const filter = button.dataset.filter;
+
+          // 3. YÊU CẦU 4: Duyệt qua từng ảnh để ẩn hoặc hiện
+          galleryItems.forEach(function (item) {
+            const category = item.dataset.category;
+            
+            // Nếu nút chọn là "all" hoặc thuộc tính ảnh khớp với nút bấm thì hiện lên
+            if (filter === "all" || category === filter) {
+              item.style.display = "";
+            } else {
+              item.style.display = "none"; // Trái lại thì ẩn đi
+            }
+          });
+        });
+      });
+    }// --- SCRIPT 5: Lọc nội dung thư viện ảnh (Filter Gallery) ---
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    if (filterButtons.length > 0 && galleryItems.length > 0) {
+      filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          // 1. Cập nhật trạng thái hiển thị active cho các nút bấm
+          filterButtons.forEach(btn => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          // 2. Lấy giá trị bộ lọc của nút vừa bấm
+          const filter = button.dataset.filter;
+
+          // 3. YÊU CẦU 4: Duyệt qua từng ảnh để ẩn hoặc hiện
+          galleryItems.forEach(function (item) {
+            const category = item.dataset.category;
+            
+            // Nếu nút chọn là "all" hoặc thuộc tính ảnh khớp với nút bấm thì hiện lên
+            if (filter === "all" || category === filter) {
+              item.style.display = "";
+            } else {
+              item.style.display = "none"; // Trái lại thì ẩn đi
+            }
+          });
+        });
+      });
+    }// --- SCRIPT 5: Lọc nội dung thư viện ảnh (Filter Gallery) ---
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    if (filterButtons.length > 0 && galleryItems.length > 0) {
+      filterButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          // 1. Cập nhật trạng thái hiển thị active cho các nút bấm
+          filterButtons.forEach(btn => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          // 2. Lấy giá trị bộ lọc của nút vừa bấm
+          const filter = button.dataset.filter;
+
+          // 3. YÊU CẦU 4: Duyệt qua từng ảnh để ẩn hoặc hiện
+          galleryItems.forEach(function (item) {
+            const category = item.dataset.category;
+            
+            // Nếu nút chọn là "all" hoặc thuộc tính ảnh khớp với nút bấm thì hiện lên
+            if (filter === "all" || category === filter) {
+              item.style.display = "";
+            } else {
+              item.style.display = "none"; // Trái lại thì ẩn đi
+            }
+          });
+        });
+      });
+    }
   </script>
 </body>
 </body>
