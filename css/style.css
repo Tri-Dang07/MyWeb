@@ -466,3 +466,27 @@ body.warm-mode .block-story {
 .theme-select option {
   color: #2b2d42; /* Chữ hiển thị bên trong danh sách xổ xuống */
 }
+/* Style cho khu vực ô tìm kiếm */
+.search-box-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 30px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Hiệu ứng khi nhấn chọn vào ô tìm kiếm */
+.search-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.2);
+}
