@@ -380,3 +380,46 @@ figcaption {
   color: var(--accent-color); /* Đổi sang màu cam khi di chuột giống nút chính */
   text-decoration: underline;
 }
+/* Mặc định trên máy tính: Ẩn nút bấm menu đi */
+.menu-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* --- GIAO DIỆN TRÊN ĐIỆN THOẠI (Dưới 768px) --- */
+@media (max-width: 768px) {
+  /* Hiện nút bấm menu lên */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Định hình lại thanh điều hướng thành một khối dọc ẩn đi */
+  .main-nav {
+    display: none; /* Mặc định ẩn trên mobile */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%; /* Đẩy menu xuống dưới Header */
+    left: 0;
+    background-color: var(--primary-color);
+    padding: 20px;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  /* YÊU CẦU 3: Khi bấm nút, class .active được thêm vào -> sẽ HIỆN MENU LÊN */
+  .main-nav.active {
+    display: flex;
+  }
+  
+  .header-container {
+    flex-wrap: wrap; /* Cho phép menu rớt dòng xuống dưới khi hiện */
+  }
+}
