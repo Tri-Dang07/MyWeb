@@ -257,6 +257,27 @@
         mainMenu.classList.toggle("active");
       });
     }
+    // --- SCRIPT 4: Tìm kiếm nhanh nội dung trong website ---
+    const searchInput = document.getElementById("searchInput");
+    const searchItems = document.querySelectorAll(".search-item");
+
+    if (searchInput && searchItems.length > 0) {
+      searchInput.addEventListener("keyup", function () {
+        // YÊU CẦU 3 & 4: Lấy từ khóa, chuyển thành chữ thường và loại bỏ khoảng trắng thừa
+        const keyword = searchInput.value.toLowerCase().trim();
+
+        searchItems.forEach(function (item) {
+          const text = item.textContent.toLowerCase();
+          
+          // Kiểm tra xem nội dung của thẻ có chứa từ khóa không
+          if (text.includes(keyword)) {
+            item.style.display = ""; // Hiển thị lại nếu khớp
+          } else {
+            item.style.display = "none"; // Ẩn đi nếu không khớp
+          }
+        });
+      });
+    }
   </script>
 </body>
 </body>
