@@ -198,5 +198,24 @@
   </footer>
 
 </body>
+  <script>
+    const toggleAboutBtn = document.getElementById("toggleAboutBtn");
+    const aboutContent = document.getElementById("aboutContent");
+
+    if (toggleAboutBtn && aboutContent) {
+      toggleAboutBtn.addEventListener("click", function () {
+        // Thực hiện toggle class hidden
+        aboutContent.classList.toggle("hidden");
+
+        // Gợi ý thêm: Đổi chữ trên nút bấm tương ứng với trạng thái đóng/mở
+        if (aboutContent.classList.contains("hidden")) {
+          toggleAboutBtn.textContent = "Xem thêm nội dung ➔";
+        } else {
+          toggleAboutBtn.textContent = "Thu gọn nội dung ➔";
+        }
+      });
+    }
+  </script>
+</body>
 </html>
-<script src="../js/script.js"></script>
+
