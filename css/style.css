@@ -423,3 +423,46 @@ figcaption {
     flex-wrap: wrap; /* Cho phép menu rớt dòng xuống dưới khi hiện */
   }
 }
+/* --- YÊU CẦU 4: CSS định nghĩa 2 trạng thái giao diện --- */
+/* Trạng thái Nền tối */
+body.dark-mode {
+  background-color: #111827 !important;
+  color: #f8fafc !important;
+}
+body.dark-mode .content-section, 
+body.dark-mode .side-panel, 
+body.dark-mode .feature-card, 
+body.dark-mode .form-container,
+body.dark-mode .block-story {
+  background-color: #1f2937 !important;
+  color: #f8fafc !important;
+}
+body.dark-mode blockquote.lead {
+  color: #e5e7eb !important;
+}
+
+/* Trạng thái Nền ấm */
+body.warm-mode {
+  background-color: #fff7ed !important;
+}
+body.warm-mode .side-panel, 
+body.warm-mode .feature-card, 
+body.warm-mode .form-container,
+body.warm-mode .block-story {
+  background-color: #ffedd5 !important;
+}
+
+/* Style cho hộp chọn gọn gàng trên thanh Menu */
+.theme-select {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+.theme-select option {
+  color: #2b2d42; /* Chữ hiển thị bên trong danh sách xổ xuống */
+}
