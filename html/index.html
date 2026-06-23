@@ -1,357 +1,198 @@
-/* --- Khai báo biến hệ thống màu sắc & thiết kế --- */
-:root {
-  --primary-color: #0077b6; /* Màu xanh nước biển cốt lõi */
-  --accent-color: #f77f00;
-  --text-dark: #2b2d42;
-  --bg-light: #f8f9fa;
-  --radius: 12px;
-  --shadow: 0 8px 24px rgba(0,0,0,0.08);
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nha Trang Travel - Cẩm Nang Toàn Tập</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
 
-/* --- Định dạng chung cho trang toàn bộ trang --- */
-* {
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: var(--text-dark);
-  line-height: 1.7;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-}
+  <div id="style-guide" style="display: none;">
+    <div class="swatches">
+      <span class="swatch-item"></span>
+    </div>
+  </div>
 
-/* --- THIẾT KẾ KHUNG HEADER PHÔNG XANH NƯỚC BIỂN XỊN --- */
-.site-header {
-  background-color: var(--primary-color); /* Phông màu xanh nước biển */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding: 15px 0;
-}
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-.brand {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #ffffff; /* Chữ logo màu trắng */
-  letter-spacing: -0.5px;
-}
-.brand span {
-  color: #ffd166; /* Chữ "Travel" màu vàng cát ấm áp */
-}
-.main-nav {
-  display: flex;
-  gap: 20px;
-}
-.nav-link {
-  text-decoration: none; /* Xóa gạch chân màu xanh lỗi cũ */
-  color: rgba(255, 255, 255, 0.85); /* Chữ trắng mờ hiện đại */
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 8px 16px;
-  border-radius: 20px;
-  transition: all 0.25s ease;
-}
-/* Hiệu ứng sáng lên khi di chuột hoặc link đang active */
-.nav-link:hover, .nav-link.active {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 0.2);
-}
+  <header class="site-header" id="main-header">
+    <div class="header-container">
+      <div class="brand">NhaTrang<span>Travel</span></div>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a href="#hero" class="nav-link active">Trang chủ</a>
+        <a href="#about" class="nav-link">Giới thiệu</a>
+        <a href="#story" class="nav-link">Câu chuyện</a>
+        <a href="#features" class="nav-link">Chủ đề</a> 
+        <a href="#portfolio" class="nav-link">Thư viện</a> 
+        <a href="#contact" class="nav-link">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
 
-/* --- Tiêu đề các Section --- */
-.section-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
-.section-header .subtitle {
-  color: #6c757d;
-  margin-top: 5px;
-}
+  <main>
+    <section class="hero" id="hero" style="background-image: url('https://images.unsplash.com/photo-1605813831004-97216a6cb394?auto=format&fit=crop&w=1600&q=80');">
+      <div class="hero-content">
+        <p class="eyebrow">Khám phá hòn ngọc viễn đông</p>
+        <h1 id="main-title">Tuyệt Tác Biển Xanh Nha Trang</h1>
+        <p class="intro lead">Chào mừng bạn đến với chuyên trang cẩm nang du lịch tự túc lớn nhất. Khám phá trọn vẹn từ các tọa độ vui chơi giải trí cho đến thế giới đặc sản phong phú.</p>
+        <a class="primary-button" href="#about">Khám phá ngay</a>
+      </div>
+    </section>
 
-/* --- Thiết kế khu vực Banner chính (Hero) --- */
-.hero {
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 140px 20px;
-  color: #fff;
-  text-align: center;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6));
-  z-index: 1;
-}
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.hero .eyebrow {
-  color: #ffd166;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
+    <section class="content-section" id="about">
+      <div class="section-header">
+        <h2>1. Tổng Quan Về Vịnh Biển Nha Trang</h2>
+        <p class="subtitle">Bức tranh sơn thủy hữu tình của vùng đất duyên hải</p>
+      </div>
+      
+      <div class="about-flex-container content-layout">
+        <div class="about-text-zone main-content">
+          <p>Nha Trang nổi tiếng là một trong những vịnh biển đẹp nhất thế giới được thiên nhiên vô cùng ưu ái. Nơi đây sở hữu khí hậu ôn hòa với hơn 300 ngày nắng ấm quanh năm, sóng biển êm dịu và bờ cát trắng mịn trải dài ôm lấy đại dương xanh ngắt.</p>
+          <p>Để tiện cho việc khám phá, cẩm nang của chúng tớ được chia làm các chủ đề cốt lõi giúp bạn dễ dàng lên lịch trình tự túc mà không gặp bất kỳ trở ngại nào.</p>
+        </div>
+        
+        <div class="about-side-zone side-panel">
+          <ul class="topic-list">
+            <li><strong>Phương tiện di chuyển:</strong> Hướng dẫn chi tiết cách săn vé máy bay đến sân bay Cam Ranh và kinh nghiệm thuê xe máy phượt nội thành.</li>
+            <li><strong>Tọa độ check-in:</strong> Khám phá khu vui chơi giải trí đẳng cấp VinWonders, di tích kiến trúc Tháp Bà Ponagar và lặn biển ngắm san hô tại Hòn Mun.</li>
+            <li><strong>Văn hóa ẩm thực:</strong> Bản đồ càn quét các món ăn mang đậm hương vị bản địa như hải sản làng chài, nem nướng Ninh Hòa và bún sứa Nha Trang.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-/* Tiêu đề chữ màu xanh nước biển đổ Gradient sinh động */
-.hero h1 {
-  font-size: 3.2rem;
-  margin: 10px 0 20px;
-  font-weight: 800;
-  background: linear-gradient(45deg, #00b4d8, #90e0ef, #ffffff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(2px 3px 4px rgba(0,0,0,0.4));
-}
-.hero .lead {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-.primary-button {
-  display: inline-block;
-  padding: 12px 30px;
-  background: var(--accent-color);
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  margin-top: 15px;
-  transition: background 0.3s ease;
-}
-.primary-button:hover {
-  background: #d66f00;
-}
+    <section class="content-section block-story" id="story">
+      <div class="section-header">
+        <h2>Câu Chuyện Du Hành</h2>
+        <p class="subtitle">Cảm nhận từ những bước chân khám phá</p>
+      </div>
+      <div class="story-container">
+        <blockquote class="lead">
+          "Nha Trang trong mắt tôi không chỉ là một điểm đến, mà là một trải nghiệm sống động nơi tiếng sóng hòa quyện với nhịp thở của vùng đất hiền hòa này."
+        </blockquote>
+      </div>
+    </section>
 
-/* --- Layout chia hai cột phần Giới thiệu --- */
-.content-section {
-  padding: 60px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.content-layout {
-  display: flex;
-  gap: 40px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
-.main-content {
-  flex: 2;
-  min-width: 300px;
-}
-.side-panel {
-  flex: 1;
-  min-width: 280px;
-  background: var(--bg-light);
-  padding: 25px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-.topic-list {
-  list-style: none;
-  padding: 0;
-}
-.topic-list li {
-  margin-bottom: 15px;
-}
+    <section class="content-section" id="features">
+      <div class="section-header">
+        <h2>2. Cẩm Nang Trải Nghiệm Nổi Bật</h2>
+        <p class="subtitle">Những dịch vụ và tiện ích không thể bỏ lỡ khi đến Nha Trang</p>
+      </div>
+      
+      <div class="card-row">
+        <div class="feature-card">
+          <div class="card-icon">✈️</div>
+          <h3>Di Chuyển Thuận Tiện</h3>
+          <p>Hỗ trợ thông tin đặt vé máy bay, tàu hỏa tốc hành và dịch vụ thuê xe máy tự túc giá tốt nhất hệ thống.</p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon">🗺️</div>
+          <h3>Lịch Trình Tối Ưu</h3>
+          <p>Gợi ý các tour đảo, lịch trình đi VinWonders, Hòn Mun, Tháp Bà Ponagar tự túc từ 3 ngày 2 đêm đến 5 ngày 4 đêm.</p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon">🍲</div>
+          <h3>Tinh Hoa Ẩm Thực</h3>
+          <p>Tổng hợp danh sách các quán ăn ngon chuẩn vị bản địa từ nem nướng, bún sứa cho đến hải sản tươi sống giá gốc.</p>
+        </div>
+      </div>
+    </section>
 
-/* --- Khối trích dẫn Câu chuyện --- */
-.block-story {
-  background: #f1f5f9;
-  max-width: 100%;
-}
-.story-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-blockquote.lead {
-  font-style: italic;
-  border-left: 4px solid var(--accent-color);
-  padding-left: 20px;
-  margin: 0;
-  font-size: 1.2rem;
-  color: #4a5568;
-}
+    <section class="content-section" id="portfolio">
+      <div class="section-header">
+        <h2>3. Thư Viện Ảnh: Góc Nhỏ Bản Địa</h2>
+        <p class="subtitle">Những thước phim ghi lại vẻ đẹp say đắm lòng người</p>
+      </div>
+      
+      <div class="image-gallery-grid portfolio-grid">
+        <figure class="gallery-item">
+          <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Bình minh trên biển Nha Trang" class="responsive-img">
+          </div>
+          <figcaption>Bình minh nhuộm vàng bờ biển Trần Phú</figcaption>
+        </figure>
 
-/* --- Các Thẻ Tính Năng --- */
-.card-row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.feature-card {
-  flex: 1;
-  min-width: 280px;
-  background: #fff;
-  padding: 30px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  text-align: center;
-}
-.card-icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
+        <figure class="gallery-item">
+          <div class="image-wrapper">
+            <img src="https://picsum.photos/id/1015/800/600" alt="Tháp Bà Ponagar cổ kính" class="responsive-img">
+          </div>
+          <figcaption>Kiến trúc huyền bí tại Tháp Bà Ponagar</figcaption>
+        </figure>
 
-/* --- Thư viện ảnh --- */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  padding: 20px 0;
-}
-.gallery-item {
-  margin: 0;
-  background: #fff;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease;
-}
-.gallery-item:hover {
-  transform: translateY(-5px);
-}
-.image-wrapper {
-  height: 240px;
-  overflow: hidden;
-  background: #eaeaea;
-}
-.responsive-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-.gallery-item:hover .responsive-img {
-  transform: scale(1.05);
-}
-figcaption {
-  padding: 15px;
-  font-weight: 600;
-  text-align: center;
-  font-size: 0.95rem;
-}
+        <figure class="gallery-item">
+          <div class="image-wrapper">
+            <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Lặn biển ngắm san hô Hòn Mun" class="responsive-img">
+          </div>
+          <figcaption>Hệ sinh thái san hô rực rỡ tại Hòn Mun</figcaption>
+        </figure>
+      </div>
+    </section>
 
-/* --- Khu vực Form liên hệ --- */
-.block-contact {
-  background: #f8f9fa;
-  max-width: 100%;
-}
-.form-container {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 40px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.form-group label {
-  font-weight: 600;
-}
-.form-group input, 
-.form-group select, 
-.form-group textarea {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-family: inherit;
-  font-size: 1rem;
-}
-.submit-button {
-  padding: 14px;
-  background: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.2s ease;
-}
-.submit-button:hover {
-  background: #005f92;
-}
+    <section class="content-section block-contact" id="contact">
+      <div class="section-header">
+        <h2>4. Nhận Tư Vấn Lịch Trình Miễn Phí</h2>
+        <p class="subtitle">Để lại thông tin, chúng tớ sẽ gửi tặng bạn bản đồ du lịch Nha Trang chi tiết nhất</p>
+      </div>
+      
+      <div class="form-container">
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="fullname">Họ và tên *</label>
+            <input type="text" id="fullname" name="fullname" placeholder="VD: Nguyễn Văn A" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email liên hệ *</label>
+            <input type="email" id="email" name="email" placeholder="VD: name@example.com" required>
+          </div>
 
-/* --- Chân trang Footer --- */
-.site-footer {
-  background: #212529;
-  color: #ced4da;
-  padding: 60px 20px;
-}
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 40px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.footer-info {
-  flex: 1;
-  min-width: 250px;
-}
-.footer-info h3 {
-  color: #fff;
-  margin-bottom: 15px;
-}
-.footer-info h3 span {
-  color: var(--accent-color);
-}
-.footer-links {
-  flex: 1;
-  min-width: 150px;
-}
-.footer-links h4, .footer-contact h4 {
-  color: #fff;
-  margin-bottom: 15px;
-}
-.footer-links ul {
-  list-style: none;
-  padding: 0;
-  line-height: 2;
-}
-.footer-links a {
-  color: #ced4da;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-links a:hover {
-  color: #fff;
-}
-.footer-contact {
-  flex: 1;
-  min-width: 250px;
-}
-.footer-divider {
-  border: 0;
-  border-top: 1px solid #343a40;
-  margin: 40px 0 20px;
-}
-.footer-bottom {
-  text-align: center;
-  font-size: 0.9rem;
-}
+          <div class="form-group">
+            <label for="plan">Dự kiến thời gian đi</label>
+            <select id="plan" name="plan">
+              <option value="3d2n">Tour 3 ngày 2 đêm</option>
+              <option value="4d3n">Tour 4 ngày 3 đêm</option>
+              <option value="custom">Đi tự túc (Cần tư vấn thêm)</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Lời nhắn / Yêu cầu đặc biệt</label>
+            <textarea id="message" name="message" rows="4" placeholder="Bạn muốn chúng tớ hỗ trợ gì thêm không?"></textarea>
+          </div>
+          
+          <button type="submit" class="submit-button">Gửi Yêu Cầu Ngay</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-info">
+        <h3>NhaTrang<span>Travel</span></h3>
+        <p>Cẩm nang du lịch tự túc và khám phá hòn ngọc viễn đông uy tín hàng đầu Việt Nam.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Liên kết nhanh</h4>
+        <ul>
+          <li><a href="#hero">Trang chủ</a></li>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#story">Câu chuyện</a></li>
+          <li><a href="#features">Chủ đề</a></li>
+          <li><a href="#portfolio">Thư viện</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Thông tin liên hệ</h4>
+        <p>📍 Địa chỉ: Đường Trần Phú, Lộc Thọ, Nha Trang, Khánh Hòa</p>
+        <p>📞 Hotline: 1900 xxxx (8:00 - 21:00)</p>
+        <p>✉️ Email: info@nhatrangtravel.com</p>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Nha Trang Travel Guide. All rights reserved. Thiết kế bởi Trang Travel.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
