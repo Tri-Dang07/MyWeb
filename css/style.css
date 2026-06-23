@@ -355,3 +355,28 @@ figcaption {
   text-align: center;
   font-size: 0.9rem;
 }
+/* BƯỚC 3: Tạo class .hidden theo đúng yêu cầu đề bài */
+.hidden {
+  display: none !important;
+}
+
+/* Style thêm cho nút bấm trông xịn mịn và hợp với giao diện của bạn */
+.text-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 5px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s ease;
+  margin-top: 10px;
+}
+
+.text-toggle-btn:hover {
+  color: var(--accent-color); /* Đổi sang màu cam khi di chuột giống nút chính */
+  text-decoration: underline;
+}
