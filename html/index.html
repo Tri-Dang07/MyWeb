@@ -219,6 +219,33 @@
       });
     }
   </script>
+  <script>
+    // --- SCRIPT 1: Ẩn hiện nội dung Giới thiệu (Bài trước) ---
+    const toggleAboutBtn = document.getElementById("toggleAboutBtn");
+    const aboutContent = document.getElementById("aboutContent");
+    if (toggleAboutBtn && aboutContent) {
+      toggleAboutBtn.addEventListener("click", function () {
+        aboutContent.classList.toggle("hidden");
+        if (aboutContent.classList.contains("hidden")) {
+          toggleAboutBtn.textContent = "Xem thêm nội dung ➔";
+        } else {
+          toggleAboutBtn.textContent = "Thu gọn nội dung ➔";
+        }
+      });
+    }
+
+    // --- SCRIPT 2: Menu tương tác (YÊU CẦU 4 trong bài mới) ---
+    const menuToggle = document.getElementById("menuToggle");
+    const mainMenu = document.getElementById("mainMenu");
+
+    if (menuToggle && mainMenu) {
+      menuToggle.addEventListener("click", function () {
+        // Tự động thêm/xóa class "active" để đóng mở menu
+        mainMenu.classList.toggle("active");
+      });
+    }
+  </script>
+</body>
 </body>
 </html>
 
